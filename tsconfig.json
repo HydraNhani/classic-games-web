@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    //Module aliases
+    "baseUrl": ".",
+    "paths": {
+      "@types": ["types.d.ts"],
+      "@util": ["util/index.ts"],
+      "@root/*": ["*/*"],
+      "@components/*": ["src/components/*"],
+      "@styles/*": ["src/styles/*"],
+      "@constants/*": ["constants/*"],
+      "@lib/*": ["lib/*"],
+      "@public/*": ["public/*"],
+      "@actions/*": ["actions/*"],
+      "@pages/*": ["src/pages/*"],
+      "@graphql/*": ["graphql/*"]
+    },
+    //for TypeGraphQL decorators
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    //NextJS default TypeScript configuration
+    "target": "es2018", //for TypeGraphQL, default es5 (NextJS default)
+    "lib": ["dom", "dom.iterable", "esnext", /* for TypeGraphQL => */"es2018", "esnext.asynciterable"], 
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    //Custom settings
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": false,
+    "noImplicitAny": true,
+    "removeComments": false
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}
