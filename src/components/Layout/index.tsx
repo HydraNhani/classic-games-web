@@ -3,13 +3,15 @@ import Head from "next/head";
 import Script from "next/script";
 import Util from "@util";
 import Header from "@components/Layout/Header";
-import type { HeaderMenuItems } from "@types";
+import type { MenuItems } from "@types";
 
-const menuItems: HeaderMenuItems = [
+const menuItems: MenuItems = [
     {
         label: "Test",
-        link: "/test",
-        links: []
+        link: "/test"
+    }, {
+        label: "testsetse",
+        link: "/testsetsetest"
     }
 ];
 

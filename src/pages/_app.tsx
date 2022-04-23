@@ -82,7 +82,7 @@ const CustomComponent: FC<{
                     withGlobalStyles
                     withNormalizeCSS
                     theme={{
-                        fontFamily: "SOME_FONT_FAMILY_HERE",
+                        fontFamily: "Titillium Web",
                         colorScheme: colorScheme,
                         primaryColor: config.primaryColor
                     }}>
