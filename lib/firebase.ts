@@ -1,16 +1,14 @@
 import { getApps, initializeApp, FirebaseOptions } from 'firebase/app';
-import { getAnalytics } from "firebase/analytics";
 import { getAuth } from 'firebase/auth';
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig: FirebaseOptions = {
-    apiKey: "SOME_API_KEY_HERE",
-    authDomain: "nextjs-template.firebaseapp.com",
-    projectId: "nextjs-template",
-    storageBucket: "nextjs-template.appspot.com",
-    messagingSenderId: "SOME_MESSAGING_SENDER_ID",
-    appId: "SOME_APP_ID",
-    measurementId: "SOME_MEASUREMENT_ID"
+    apiKey: "AIzaSyCgisQVxeiY1xWKCd_vMNwFvAJ2rexinio",
+    authDomain: "classic-games-web.firebaseapp.com",
+    projectId: "classic-games-web",
+    storageBucket: "classic-games-web.appspot.com",
+    messagingSenderId: "1081145698211",
+    appId: "1:1081145698211:web:aed1d0ef95e4a36550dc16"
 };
 
 const app = getApps().length ? getApps()[0] : initializeApp(firebaseConfig);
