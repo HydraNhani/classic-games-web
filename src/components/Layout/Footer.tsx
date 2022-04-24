@@ -5,6 +5,7 @@ import Logo from "@public/favicon.ico";
 import Image from "next/image";
 import { MenuItems } from "@types";
 import Link from "@components/Link";
+import Constants from "@constants/index";
 
 const Footer: FC<{
     menuItems: MenuItems;
@@ -31,7 +32,7 @@ const Footer: FC<{
                 <div className="flex flex-col items-center sm:block sm:flex-row sm:items-start" style={{ maxWidth: 200 }}>
                     <Image src={Logo} />
                     <Text size="xs" color="dimmed" className="mt-1 text-center sm:text-left">
-                        {process.env.APPLICATION_DESCRIPTION}
+                        {Constants.APPLICATION_DESCRIPTION}
                     </Text>
                 </div>
                 <div className="sm:flex flex-wrap hidden">{groups}</div>

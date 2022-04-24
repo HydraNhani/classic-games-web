@@ -11,11 +11,11 @@ const LoadingScreen: FC = () => {
         <div className="flex items-center justify-center bg-lightmodebackground dark:bg-darkmodebackground min-h-[100vh]">
             <div className={Util.classNames(styles.loader, "before:bg-lightmodebackground before:dark:bg-darkmodebackground after:bg-lightmodebackground after:dark:bg-darkmodebackground")}>
                 {numbers.map((number) => (
-                    <div key={number} className={Util.classNames(styles.box, styles[`box${number}`])}><div/></div>
+                    <div key={number} className={Util.classNames(styles.box, styles[`box${number}`])}><div /></div>
                 ))}
-                <div className={styles.ground}><div/></div>
+                <div className={styles.ground}><div /></div>
             </div>
-            <small className="block absolute bottom-45 text-2xl sm:text-5xl text-lightmodetext dark:text-darkmodetext text-center"> {process.env.APPLICATION_NAME} </small>
+            <small className="block absolute bottom-45 text-2xl sm:text-5xl text-lightmodetext dark:text-darkmodetext text-center"> {Constants.APPLICATION_NAME} </small>
         </div>
     );
 };
