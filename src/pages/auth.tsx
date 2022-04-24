@@ -1,7 +1,7 @@
 import type { NextPageWithConfiguration } from "types";
 import { useTitle, useDescription, useHeader } from "@lib/hooks";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
-import { EmailAuthProvider } from "firebase/auth";
+import { EmailAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "@lib/firebase";
 
 const AuthenticationPage: NextPageWithConfiguration = () => {
@@ -20,7 +20,7 @@ const AuthenticationPage: NextPageWithConfiguration = () => {
             signInOptions: [{
                 provider: EmailAuthProvider.PROVIDER_ID,
                 requireDisplayName: true
-            }]
+            }, GoogleAuthProvider.PROVIDER_ID]
         }} firebaseAuth={auth} className="font-coc-description"/>
     );
 };

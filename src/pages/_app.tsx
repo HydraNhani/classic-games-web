@@ -74,7 +74,11 @@ const CustomComponent: FC<{
         return (
             <ColorSchemeProvider toggleColorScheme={(value) => {
                 setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
-                if (value == "dark") document.documentElement.classList.add("dark");
+                setCookies("mode", value || (colorScheme === 'dark' ? 'light' : 'dark'), {
+                    expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 720),
+                    path: "/"
+                });
+                if (value || (colorScheme === 'dark' ? 'light' : 'dark') == "dark") document.documentElement.classList.add("dark");
                 else document.documentElement.classList.remove("dark");
             }} colorScheme={colorScheme}>
                 <MantineProvider
