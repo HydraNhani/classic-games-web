@@ -25,7 +25,7 @@ const Header: FC<{
                     <HeaderLink href={link.link}>
                         <Center component="a">
                             <span className="mr-1">{link.label}</span>
-                            <ChevronDownIcon className="h-3 p-3"/>
+                            <ChevronDownIcon className="h-3 w-3 text-lightmodetext dark:text-darkmodetext"/>
                         </Center>
                     </HeaderLink>
                 }>{menuItems}</Menu>
@@ -37,7 +37,7 @@ const Header: FC<{
         );
     });
     return (
-        <MantineHeader height={56} className="" mb={120}>
+        <MantineHeader className="sticky bg-lightmodeprimary dark:bg-darkmodeprimary" height={56}>
             <Container>
                 <div className="h-14 flex justify-between items-center">
                     <Image src={Logo}/>

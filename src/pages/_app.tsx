@@ -20,7 +20,6 @@ import { getCookie, setCookies } from "cookies-next";
 import type { FC } from "react";
 import type { ComponentWithConfigurationProps, CustomComponentType } from "@types";
 import type { ColorScheme } from "@mantine/core";
-import config from "config.json";
 
 const CustomComponent: FC<{
     Component: CustomComponentType;
@@ -83,8 +82,7 @@ const CustomComponent: FC<{
                     withNormalizeCSS
                     theme={{
                         fontFamily: "Titillium Web",
-                        colorScheme: colorScheme,
-                        primaryColor: config.primaryColor
+                        colorScheme: colorScheme
                     }}>
                     <NotificationsProvider>
                         <Layout>
