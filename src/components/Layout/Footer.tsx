@@ -4,6 +4,7 @@ import { BrandTwitter, BrandYoutube, BrandInstagram } from "tabler-icons-react";
 import Logo from "@public/favicon.ico";
 import Image from "next/image";
 import { MenuItems } from "@types";
+import Link from "@components/Link";
 
 const Footer: FC<{
     menuItems: MenuItems;
@@ -17,7 +18,9 @@ const Footer: FC<{
         ));
         return (
             <div className="w-40" key={group.label}>
-                <Text sx={{ marginBottom: theme.spacing.xs / 2 }} className="font-bold text-lg text-lightmodetext dark:text-darkmodetext">{group.label}</Text>
+                <Link>
+                    <Text sx={{ marginBottom: theme.spacing.xs / 2 }} className="font-bold text-lg text-lightmodetext dark:text-darkmodetext">{group.label}</Text>
+                </Link>
                 {links}
             </div>
         );

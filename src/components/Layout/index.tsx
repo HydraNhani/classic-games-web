@@ -9,12 +9,16 @@ import type { MenuItems } from "@types";
 
 const menuItems: MenuItems = [
     {
-        label: "Test",
-        link: "/test",
+        label: "Authentication",
+        link: "/auth",
         links: [
             {
-                label: "Test 2",
-                link: "/test2"
+                label: "Sign in",
+                link: "/auth"
+            },
+            {
+                label: "Sign Up",
+                link: "/auth"
             }
         ]
     }
